@@ -1,6 +1,6 @@
 Title: Python3学习笔记--基础知识
-Date: 2016-11-26
-Modified: 2016-11-26
+Date: 2016-10-04
+Modified: 2016-10-04
 Tags: Python,Python3
 Slug: Python3_study_note_base
 Authors: Cokernut
