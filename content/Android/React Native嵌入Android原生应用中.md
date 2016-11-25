@@ -136,9 +136,12 @@ apply from: "$rootDir/node_modules/react-native/react.gradle"
 ```
  dependencies {
      ...
-     compile "com.facebook.react:react-native:+" //+可以为实际版本号比如：0.38.0
+     compile "com.facebook.react:react-native:+"
  }
- 或：
+```  
+如果你想总是使用一个特定的版本，你需要把+替换成你已经下载的React Native的版本号，
+这个版本号应该与package.json中的react-native的版本号("react-native": "^0.38.0")一致的。如本例中的0.38.0：  
+```
  dependencies {
      ...
      compile "com.facebook.react:react-native:0.38.0"
@@ -277,7 +280,7 @@ public class MyReactActivity extends Activity implements DefaultHardwareBackBtnH
 有悬浮窗权限才能显示：  
 ![图片](images/Android/android_React_Native_to_Native/7.png "图片")    
 
-注册MyReactActivity：注意主题为NoActionBar
+注册MyReactActivity：注意主题为Theme.AppCompat.Light.NoActionBar  
 ```
 <activity
     android:name=".MyReactActivity"
@@ -315,7 +318,10 @@ public class MyReactActivity extends Activity implements DefaultHardwareBackBtnH
 2. 直接利用Android Studio像平常一样运行项目  
 
 如果你使用的是Android studio为你构建而不是Gradle构建(gradlew installDebug)，你要确保你在安装应用之前运行了npm start。
-以防止它们之间出现冲突。
+以防止它们之间出现冲突。  
+效果：  
+![图片](images/Android/android_React_Native_to_Native/15.png "图片")
+![图片](images/Android/android_React_Native_to_Native/16.png "图片")  
 
 ### 在Android Studio中打包成独立安装程序
 
